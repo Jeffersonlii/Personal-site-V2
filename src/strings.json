@@ -1,0 +1,63 @@
+
+
+ {
+  "my_name" : "Jefferson Li",
+  "short_desc" : ["Full Stack Developer","Student at University of Toronto"],
+  "qualifications" : {
+    "Technical Skills": {
+      "Web": {
+        "HTML/CSS/JS" : "Created a number of sites using HTML/CSS/JS, including this one!",
+        "Angular" : "Worked with an Angular frontend during my time as a fullstack developer for Termerity Analytics.",
+        "Flask" : "Used Flask as backend for 'where am I' webapp",
+        "Django/Django REST framwork" : "Worked with the Django REST framwork backend during my time as a fullstack developer for Termerity Analytics.",
+        "SQL/PostgreSQL/SQLite" : "Utilized PostgreSQL during my time as a fullstack developer for Termerity Analytics",
+        "JSON": "",
+        "Asyncronous Programming": "",
+        "Amazon Web Service": ""
+      },
+      "General": {
+        "C" : "",
+        "Python": "",
+        "Java": "",
+        "Shell/Bash": "",
+        "SVN": "",
+        "GIT": ""
+      },
+      "Tools":{
+        "Windows/MacOS/Linux" : "",
+        "Android Studio": "",
+        "Microsoft Office Suite": "",
+        "Sourcetree": ""
+      }
+    },
+    "Education": {
+        "University of Toronto": "",
+        "Software Engineering Specialist, Statistics Minor": "",
+        "GPA: 3.82/4.0": ""
+    },
+    "Award": {
+        "UofT Dean’s Scholarships" : "Awarded to students with 3.5+ GPA with a full course load",
+        "UofT Entrance Scholarship ($1.5k)" : "Awarded to applicants with 90+ highschool average"
+    },
+    "Interests and Hobbies": {
+        "Swimming" : "",
+        "Weight Training " : "",
+        "Photography" : ""
+    }
+  },
+  "projects" : {},
+  "work exp" : {},
+
+  "footer text": {
+      "fun":"Developed During Quarantine by Jefferson Li",
+      "notfun": "©2020 Jefferson Li. All rights reserved."
+  },
+  "socials": {
+    "Resume":  { "link": "../../../assets/resume.pdf", "desc": "See My Resume" },
+    "LinkedIn": { "link": "https://www.linkedin.com/in/jeffersonlii/", "desc": "See My Experience" },
+    "Github": { "link": "https://github.com/Jeffersonlii", "desc": "See My Projects" },
+    "Instagram": { "link": "https://www.instagram.com/jeffersonlii/", "desc": "See My Photography" } 
+  }
+}
+    
+

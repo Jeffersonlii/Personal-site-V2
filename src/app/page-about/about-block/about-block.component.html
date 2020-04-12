@@ -1,0 +1,46 @@
+<div id="box" >
+
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+                Technical Skills
+   
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let category of quals['Technical Skills'] | keyvalue: defKeyorder">
+            <div class="font-tertiary-bold">{{category.key}}</div>
+            <div *ngFor="let skill of category.value | keyvalue: defKeyorder" class="skill font-tertiary">
+              <div  [matTooltip]="skill.value" >
+                {{ skill.key }} 
+
+            </div>
+
+            </div>
+            <br>
+          </div>
+        </mat-expansion-panel>
+    </mat-accordion> 
+    <div id="col">
+        <ng-container *ngFor="let skill_category of quals | keyvalue: defKeyorder">
+        
+            <mat-accordion *ngIf=" skill_category.key != 'Technical Skills'">
+                <mat-expansion-panel [expanded]="true">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                        {{ skill_category.key }}
+             
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div *ngFor="let value of skill_category.value | keyvalue: defKeyorder"
+                  class="font-tertiary skill">
+                    <div  [matTooltip]="value.value">
+                        {{ value.key }}
+                    </div>
+                  </div>
+                  
+                </mat-expansion-panel>
+            </mat-accordion> 
+        </ng-container>
+    </div>
+</div>

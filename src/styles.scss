@@ -1,0 +1,137 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+$colour: black;
+$negative-colour: white;
+.font { 
+    font-family: 'Lato', sans-serif;
+}
+
+//overide globals
+body{
+    background-color: $colour;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: $negative-colour;
+}
+
+::ng-deep .mat-expansion-panel{
+    background: transparent;
+    color: rgba(0,0,0,0); /* transparent */
+}
+::ng-deep .mat-expansion-panel-header{
+    /* styles that were added to panel before */
+    background: transparent;
+    color: rgba(0,0,0,0); /* transparent */
+}
+.mat-expansion-panel-header-title{
+    @extend .font-secondary-bold;
+}
+::ng-deep .mat-expansion-indicator {
+    color: $negative-colour;
+}
+::ng-deep .mat-expansion-indicator::after {
+    color: $negative-colour;
+}
+
+.mat-bottom-sheet-container-xlarge{
+    background-color: $negative-colour;
+}
+::ng-deep .mat-bottom-sheet-container{
+    min-width: 200px !important;
+    max-height: 95vh !important;
+}
+.mat-line{
+    color: $colour;
+}
+
+html{
+    //disable scroll
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
+    }
+}
+
+//global vars
+
+//body boxes
+#box, #header-box{
+    margin: 2% 20% 0 20%;
+    padding: 1%;
+}
+
+.font {
+    color: $negative-colour;
+    &-primary{
+        @extend .font;
+        font-size: 5vh;
+    }
+    &-secondary{
+        @extend .font;
+
+        font-size: 2vh;
+        &-bold{
+            @extend .font-secondary;
+            font-weight: 700;
+        }
+    }
+    &-tertiary{
+        @extend .font;
+
+        font-size: 1.75vh;
+        &-bold{
+            @extend .font-tertiary;
+            font-weight: 700;
+        }
+    }
+    &-links{
+        @extend .font;
+
+        font-size: 2vh;
+
+    }
+    &-footer{
+        @extend .font;
+        font-size: 1.5vh;
+    }
+}
+.router-link-active{
+    background-color: $colour;
+    color: $negative-colour !important;
+    padding: 5px;
+}
+#background-vid{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+    max-width: 90%;
+    margin-right: 24%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    #box, #header-box{
+        margin: 1% 1% 0 1%;
+        padding: 1%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #box, #header-box{
+        margin: 1% 1% 0 1%;
+        padding: 1%;
+    }
+  }

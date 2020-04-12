@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+#box{
+    //box
+    height: 75vh;
+    //: red 1px dotted;
+    display: flex;
+    overflow: hidden;
+    margin-top: -5vh;
+
+
+    & #positional-box{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    & #portrait-box{
+        width: 300px;
+        height: 500px;
+        //border: black 1px solid;
+    }
+    & .paragraph{
+        //padding-right: 10vh;
+    }
+}
+
+.desc {
+    &-name{
+        @extend .font-primary;
+    }
+    &-job{        
+        @extend .font-secondary;
+    }
+    &-school{        
+        @extend .font-secondary;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #box #positional-box{
+        width: 70%;
+    }
+  }

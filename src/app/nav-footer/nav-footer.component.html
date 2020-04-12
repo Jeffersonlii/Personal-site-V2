@@ -1,0 +1,12 @@
+<div id="footer-wrapper">
+    <video autoplay muted loop id="footer-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
+        <source src="../../assets/vids/footerr.mp4" type="video/mp4">
+    </video>
+    <div id="footer-box">
+        <div class="font-footer">{{ footer_text_fun }}</div>
+        <div class="font-footer">{{ footer_text_notfun }}</div>
+    </div>
+    <div style="flex-grow: 999;"></div>
+    <div (click)="openBottomSheet()" id="footer-link"> Work with Me !</div>
+</div>
+

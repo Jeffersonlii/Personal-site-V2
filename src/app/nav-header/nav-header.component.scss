@@ -1,0 +1,36 @@
+@import '../../styles.scss';
+
+#header-box{
+    // box style
+    width: 15%;
+    height: 15%;
+    min-width: 100px;
+    min-height: 100px;
+    margin-left: 35%;
+    overflow: hidden;
+
+    //sticky style
+    position: sticky;
+    top: 0;
+
+    //flex style
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    & a{
+        @extend .font-links;
+    }
+}
+
+#nav-background-vid{
+    position: absolute;
+    z-index: 0;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px; /* fixed to left. Replace it by right if you want.*/
+    min-width: 100%;
+    min-height: 100%;
+    height: inherit;
+    z-index: -1;
+}

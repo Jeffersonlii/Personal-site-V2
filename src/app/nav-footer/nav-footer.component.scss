@@ -1,0 +1,39 @@
+@import '../../styles.scss';
+
+#footer-wrapper{
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+    height: inherit;
+    display: flex;
+}
+
+#footer-link{
+    cursor: pointer;
+    @extend .font-tertiary-bold;
+    color: white;
+    background-color: red;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+#footer-box{
+    width: fit-content;
+    height: fit-content;
+    
+    margin: 20px;
+    padding: 10px;
+    background:$colour;
+}
+
+#footer-background-vid{
+    position: absolute;
+    background-size: 100% 100%;
+    left: 0px; /* fixed to left. Replace it by right if you want.*/
+    min-height: 100%;
+    height: inherit;
+    z-index: -2;
+    top: -320px;
+    width: inherit;
+}

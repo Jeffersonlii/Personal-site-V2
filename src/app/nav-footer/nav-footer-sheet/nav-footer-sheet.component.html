@@ -1,0 +1,12 @@
+<!-- <iframe src="../../../assets/resume.pdf" style="width:900px; height:300px;" frameborder="0"></iframe> -->
+
+<mat-nav-list >
+  <iframe  src="../../../assets/resume.pdf" style="width:40vw; height:60vh" *ngIf="expandResume"></iframe>
+    <ng-container *ngFor="let social of socials | keyvalue: defKeyorder">
+    <a [href]="social.value.link" target="_blank" *ngIf="social.key !== 'Resume' || !expandResume" mat-list-item>
+      <span mat-line>{{social.key}}</span>
+      <span mat-line>{{social.value.desc}}</span>
+    </a>
+    </ng-container>
+  </mat-nav-list>
+  
