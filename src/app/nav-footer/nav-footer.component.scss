@@ -1,11 +1,12 @@
 @import '../../styles.scss';
 
 #footer-wrapper{
-    position: relative;
+    position: sticky;
     max-width: 600px;
     overflow: hidden;
     height: inherit;
     display: flex;
+    bottom: 0;
 }
 
 #footer-link{
@@ -15,7 +16,8 @@
     background-color: red;
     margin: 20px;
     padding: 10px;
-
+    display: flex;
+    align-items: center;
 }
 
 #footer-box{
@@ -34,6 +36,6 @@
     min-height: 100%;
     height: inherit;
     z-index: -2;
-    top: -320px;
+    top: -460px;
     width: inherit;
 }

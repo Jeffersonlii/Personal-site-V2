@@ -1,1 +1,37 @@
-<p>page-exp works!</p>
+<div id="box">
+    <div id="exp-box" class="check-box">
+        <div id="checks">
+            <mat-checkbox 
+            color="warn"
+            [checked]="true"
+            (change)="filerExp('work', $event)" >Work</mat-checkbox>
+            <mat-checkbox 
+            color="warn"
+            [checked]="true"
+            (change)="filerExp('projects', $event)">Projects</mat-checkbox>
+        </div>
+    </div>
+
+    <ng-container *ngFor="let item of experiences | keyvalue: keyPipeSort">
+        <div id="exp-box">
+            <div class="title-block">
+                <div class="sub-title-els">
+                    {{item.value.time | datePipe}}
+                </div>
+
+                <div class="title-el">
+                    {{item.key}}
+                </div>
+                <div class="sub-title-els">
+                    {{item.value.desc}}
+                </div>
+                
+            </div>
+            <!-- <div style="flex-grow: 2;"></div> -->
+            <div class="pic">
+                <img [src]="item.value.pic" alt="project picture">
+
+            </div>
+        </div>
+    </ng-container>
+</div>

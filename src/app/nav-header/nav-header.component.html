@@ -2,8 +2,16 @@
     <video autoplay muted loop id="nav-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
         <source src="../../assets/vids/ocean_Vid.mp4" type="video/mp4">
     </video>
+
     <a
-   [routerLink]="['/about']" routerLinkActive="router-link-active" >About</a>
-    <a matTooltip="Info about the action"
-    [routerLink]="['/exp']" routerLinkActive="router-link-active" >Experience</a>
+        [routerLink]="['/about']"
+        routerLinkActive="router-link-active" >
+        About
+    </a>
+    <a
+        [routerLink]="['/exp']"
+        routerLinkActive="router-link-active" >
+        Experience
+    </a>
+
 </nav>

@@ -1,0 +1,73 @@
+@import '../../styles.scss';
+#box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#checks{
+    background-color: rgba(255,255,255,0.8);;
+    width: fit-content;
+    padding: 20px;
+    mat-checkbox{
+       margin: 10px; 
+    }
+    align-self: flex-end;
+}
+#box .check-box{
+    background:transparent;
+    height: fit-content;
+    border: 0;
+    margin-top: -8.7rem;
+
+}
+#exp-box{
+    width: 90%;
+    height: 40vh;
+    background-color: rgba(255,255,255,0.8);
+    margin: 2rem;
+    //border-radius: 25px 0 0 25px;
+    display: flex;
+    flex-direction: row;
+    //border: white 1px solid;
+    & .title-block{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .title-el{
+            color: $colour;
+            @extend .font-primary;
+            text-align: center;
+            //mix-blend-mode: difference;
+        }
+        & .sub-title-els{
+            color: $colour;
+            @extend .font-tertiary;
+            //mix-blend-mode: difference;
+
+        }
+    }
+    & .pic{
+        //border: red 1px solid;
+        width: 25%;
+        margin: 5rem 5rem 5rem 0;
+        > img{
+            height: 100%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #exp-box .pic{
+        display: none;
+    }
+    #exp-box .title-block{
+        width: 100%;
+    }
+    #box .check-box{
+        margin: 0;
+    }
+}

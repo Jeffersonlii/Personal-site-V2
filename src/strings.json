@@ -3,6 +3,7 @@
  {
   "my_name" : "Jefferson Li",
   "short_desc" : ["Full Stack Developer","Student at University of Toronto"],
+  "paragraph" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis doloribus recusandae aspernatur odit aut excepturi dicta ea aliquid eligendi, rerum fugiat inventore saepe, cum perspiciatis fugit error nisi harum. Itaque! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis doloribus recusandae aspernatur odit aut excepturi dicta ea aliquid eligendi, rerum fugiat inventore saepe, cum perspiciatis fugit error nisi harum. Itaque! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis doloribus recusandae aspernatur odit aut excepturi dicta ea aliquid eligendi, rerum fugiat inventore saepe, cum perspiciatis fugit error nisi harum. Itaque!",
   "qualifications" : {
     "Technical Skills": {
       "Web": {
@@ -45,11 +46,19 @@
         "Photography" : ""
     }
   },
-  "projects" : {},
-  "work exp" : {},
-
+  "projects" : {
+    "WhereAmI?" : { "desc": "", "redir_component" : "", "link" : "https://github.com/Jeffersonlii/Where-Am-I-", "pic": "", "time": "08/01/2019"},
+    "Personal Website" : { "desc": "","redir_component" : "", "link" : "", "pic": "",  "time": "04/01/2020"},
+    "Gold" : { "desc": "","redir_component" : "", "link" : "", "pic": "",  "time": "11/01/2019"},
+    "Course Website": {"desc": "", "redir_component" : "", "link" : "https://github.com/Jeffersonlii/Sample-Course-Site", "pic": "" ,  "time": "03/01/2019"}
+  },
+  "work exp" : {
+    "Temerity Analytics" : {"desc": "Full Stack Developer", "redir_component" : "", "link" : "https://temerityanalytics.com/", "pic" : "../../assets/projects-and-work/temerity/logo.jpg", "time": "01/01/2020 - current"}
+  },
+  "toasts" : {"work" : "Displaying Work Experience", "projects" : "Displaying Projects", "both": "Displaying Work Experience and Projects", "none": "" },
   "footer text": {
-      "fun":"Developed During Quarantine by Jefferson Li",
+      "fun":"Developed During Quarantine by Jefferson Li.",
+      "chrome": "Best Viewed On Chrome",
       "notfun": "©2020 Jefferson Li. All rights reserved."
   },
   "socials": {

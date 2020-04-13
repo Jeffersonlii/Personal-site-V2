@@ -8,8 +8,9 @@ import * as GlobalStrings from '../../../strings.json';
 })
 export class TitlePageComponent implements OnInit {
   self_info: {name:string, extras:string[]} = {name: '', extras: []};
+  paragraph: string
   constructor() {
-    this
+    this.paragraph = GlobalStrings.paragraph;
     this.self_info.name = GlobalStrings.my_name;
     this.self_info.extras = GlobalStrings.short_desc;
    }

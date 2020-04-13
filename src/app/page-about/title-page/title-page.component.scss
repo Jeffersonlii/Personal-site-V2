@@ -21,7 +21,8 @@
         //border: black 1px solid;
     }
     & .paragraph{
-        //padding-right: 10vh;
+        text-align: justify;
+        mix-blend-mode: difference;
     }
 }
 
@@ -40,5 +41,8 @@
 @media only screen and (max-width: 800px) {
     #box #positional-box{
         width: 70%;
+    }
+    #box {
+        margin-top: 0;
     }
   }

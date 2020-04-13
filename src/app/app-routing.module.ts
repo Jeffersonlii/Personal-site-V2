@@ -4,21 +4,15 @@ import { PageAboutComponent } from './page-about/page-about.component';
 import { PageExpComponent } from './page-exp/page-exp.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'about', pathMatch: 'full'}, 
   {
-    path: '',
-   component: PageAboutComponent,
-   children: [
-      {
-        path: 'about',
-        component: PageAboutComponent
-      }
-    ]
+    path: 'about',
+    component: PageAboutComponent,
   },
   {
     path: 'exp',
     component: PageExpComponent
-  }
-
+  },
 ];
 
 @NgModule({

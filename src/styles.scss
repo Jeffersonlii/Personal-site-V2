@@ -1,9 +1,10 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-$colour: black;
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+$colour: black ;
 $negative-colour: white;
+
 .font { 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 //overide globals
@@ -28,33 +29,51 @@ a:link, a:visited, a:hover, a:active {
     @extend .font-secondary-bold;
 }
 ::ng-deep .mat-expansion-indicator {
-    color: $negative-colour;
+    color: red;
 }
 ::ng-deep .mat-expansion-indicator::after {
-    color: $negative-colour;
+    color: red;
 }
 
 .mat-bottom-sheet-container-xlarge{
     background-color: $negative-colour;
 }
 ::ng-deep .mat-bottom-sheet-container{
+    border-radius: 0 !important;
     min-width: 200px !important;
     max-height: 95vh !important;
 }
 .mat-line{
-    color: $colour;
+    @extend .font;
+    color: $colour !important;
 }
 
-html{
-    //disable scroll
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+.mat-tooltip{
+    @extend .font-footer;
+    background-color: $negative-colour !important;
+    color: $colour !important;
+    border-radius: 0 !important;
+}
+.mat-checkbox-label{
+    color: black !important;
+    @extend .font-tertiary;
+}
 
-    &::-webkit-scrollbar { /* WebKit */
-        width: 0;
-        height: 0;
-    }
+.mat-snack-bar-container{
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+html{
+    font-size: 14px;
+//     //disable scroll
+//     overflow-y: scroll;
+//     scrollbar-width: none; /* Firefox */
+//     -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+//     &::-webkit-scrollbar { /* WebKit */
+//         width: 0;
+//         height: 0;
+//     }
 }
 
 //global vars
@@ -69,12 +88,12 @@ html{
     color: $negative-colour;
     &-primary{
         @extend .font;
-        font-size: 5vh;
+        font-size: 3rem;
     }
     &-secondary{
         @extend .font;
 
-        font-size: 2vh;
+        font-size: 1.5rem;
         &-bold{
             @extend .font-secondary;
             font-weight: 700;
@@ -83,7 +102,7 @@ html{
     &-tertiary{
         @extend .font;
 
-        font-size: 1.75vh;
+        font-size: 1.25rem;
         &-bold{
             @extend .font-tertiary;
             font-weight: 700;
@@ -92,18 +111,20 @@ html{
     &-links{
         @extend .font;
 
-        font-size: 2vh;
+        font-size: 1.5rem;
 
     }
     &-footer{
         @extend .font;
-        font-size: 1.5vh;
+        font-size: 1rem;
     }
 }
 .router-link-active{
-    background-color: $colour;
-    color: $negative-colour !important;
+
+    background-color: black;
+    //color: white !important;
     padding: 5px;
+    mix-blend-mode: darken;
 }
 #background-vid{
     position: fixed;

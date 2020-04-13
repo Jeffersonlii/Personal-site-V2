@@ -9,10 +9,12 @@ import {NavFooterSheetComponent} from './nav-footer-sheet/nav-footer-sheet.compo
 })
 export class NavFooterComponent implements OnInit {
   footer_text_fun: string;
+  footer_text_chrome: string;
   footer_text_notfun: string;
 
   constructor(private _bottomSheet: MatBottomSheet) {
     this.footer_text_fun = GlobalStrings["footer text"].fun;
+    this.footer_text_chrome = GlobalStrings["footer text"].chrome;
     this.footer_text_notfun = GlobalStrings["footer text"].notfun;
   }
 
