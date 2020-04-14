@@ -18,7 +18,7 @@
     height: fit-content;
     border: 0;
     margin-top: -8.7rem;
-
+    justify-content: unset;
 }
 #exp-box{
     width: 90%;
@@ -28,13 +28,16 @@
     //border-radius: 25px 0 0 25px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     //border: white 1px solid;
     & .title-block{
-        width: 65%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 10%;
+
         & .title-el{
             color: $colour;
             @extend .font-primary;
@@ -48,28 +51,31 @@
 
         }
     }
+    
+    .ifNoPic{
+        margin-left: 0;
+    }
     & .pic{
         //border: red 1px solid;
-        width: 35%;
-        margin: 5rem 5rem 5rem 0;
+        width: 40%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        margin-right: 10%;
+
         > img{
-            width: 100%;
+            width: 50%;
         }
     }
 }
 
 
 @media only screen and (max-width: 1200px) {
-
     #exp-box .pic{
         display: none;
-    }
-    #exp-box .title-block{
-        width: 100%;
     }
     #box .check-box{
         margin: 0;
     }
 }
+

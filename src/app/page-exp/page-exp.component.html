@@ -14,7 +14,7 @@
 
     <ng-container *ngFor="let item of experiences | keyvalue: keyPipeSort">
         <div id="exp-box">
-            <div class="title-block">
+            <div class="title-block" [ngClass]="{ifNoPic: item.value.pic === '' }">
                 <div class="sub-title-els">
                     {{item.value.time | datePipe}}
                 </div>
@@ -28,9 +28,8 @@
                 
             </div>
             <!-- <div style="flex-grow: 2;"></div> -->
-            <div class="pic">
+            <div class="pic" *ngIf="item.value.pic != '' ">
                 <img [src]="item.value.pic" alt="project picture">
-
             </div>
         </div>
     </ng-container>
