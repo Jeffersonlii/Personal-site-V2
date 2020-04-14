@@ -24,6 +24,11 @@
         "SVN": "",
         "GIT": ""
       },
+      "Testing": {
+        "Jasmine/Karma": "",
+        "Postman": "",
+        "Swagger": ""
+      },
       "Tools":{
         "Windows/MacOS/Linux" : "",
         "Android Studio": "",
@@ -53,7 +58,7 @@
     "Course Website": {"desc": "", "redir_component" : "", "link" : "https://github.com/Jeffersonlii/Sample-Course-Site", "pic": "" ,  "time": "03/01/2019"}
   },
   "work exp" : {
-    "Temerity Analytics" : {"desc": "Full Stack Developer", "redir_component" : "", "link" : "https://temerityanalytics.com/", "pic" : "../../assets/projects-and-work/temerity/logo.jpg", "time": "01/01/2020 - current"}
+    "Temerity Analytics" : {"desc": "Full Stack Developer", "redir_component" : "", "link" : "https://temerityanalytics.com/", "pic" : "../../assets/projects-and-work/temerity/logo", "time": "01/01/2020 - current"}
   },
   "toasts" : {"work" : "Displaying Work Experience", "projects" : "Displaying Projects", "both": "Displaying Work Experience and Projects", "none": "" },
   "footer text": {

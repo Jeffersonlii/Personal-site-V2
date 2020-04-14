@@ -75,6 +75,9 @@ html{
 //         height: 0;
 //     }
 }
+body{
+    margin: 0;
+}
 
 //global vars
 
@@ -138,21 +141,25 @@ html{
     margin-right: 24%;
 }
 
-@media only screen and (max-width: 800px) {
-
-    #box, #header-box{
-        margin: 1% 1% 0 1%;
-        padding: 1%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-}
-
 @media only screen and (max-width: 1200px) {
 
     #box, #header-box{
-        margin: 1% 1% 0 1%;
+        margin: 1% 10% 0 10%;
         padding: 1%;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: space-evenly;
     }
-  }
+    html{
+        font-size: 11px;
+    }
+}
+
+// @media only screen and (max-width: 1200px) {
+
+//     #box, #header-box{
+//         margin: 1% 10% 0 10%;
+//         padding: 1%;
+//     }
+
+//   }

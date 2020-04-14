@@ -24,6 +24,6 @@ export class NavFooterSheetComponent implements OnInit {
   }
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
-    this.expandResume = window.innerWidth > 800;
+    this.expandResume = window.innerWidth > 1200;
   }
 }
