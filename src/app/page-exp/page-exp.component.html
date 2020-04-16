@@ -1,3 +1,6 @@
+<iframe src="../assets/cool page/cool.html" style="width: 100%; height: 200%;position: absolute;" frameborder="0"></iframe>
+<!-- <iframe src="https://www.csh.bz/line/05xp.html" style="width: 100%; height: 200%;position: absolute;" frameborder="0"></iframe> -->
+
 <div id="box">
     <div id="exp-box" class="check-box">
         <div id="checks">
@@ -13,7 +16,7 @@
     </div>
 
     <ng-container *ngFor="let item of experiences | keyvalue: keyPipeSort">
-        <div id="exp-box">
+        <div id="exp-box" onclick="alert('asdf')">
             <div class="title-block" [ngClass]="{ifNoPic: item.value.pic === '' }">
                 <div class="sub-title-els">
                     {{item.value.time | datePipe}}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cool single file page 
+        </title>
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body {background-color: transparent;}
+            html {overflow: hidden;}
+        </style>
+
+    </head>
+
+    <body>
+        <canvas id="canvas"></canvas>
+    </body>
+    <script type="text/javascript">
+
+        let canvas;
+        let ctx;
+
+        let prevCord;
+        let curCord;
+        let centerCord;
+        let elementList;
+
+        let spinmode;
+
+        class CoolDiagLine {
+            alpha = 1;
+            offset = 1;
+            curCord;
+            prevCord;
+            centerCord;
+            ctx;
+            elList;
+            spin;
+            spread;
+            constructor(cur,prev,ctx,elList,center, spin){
+                this.curCord = cur;
+                this.prevCord = prev;
+                this.ctx = ctx;
+                this.elList = elList;
+                this.centerCord = center;
+                this.spin = spin;
+                this.spread = Math.random() < 0.3;
+            }
+            repaint(){
+
+                if (this.alpha < 0){
+                    this.elList.shift();
+                    return;
+                }
+                this.ctx.lineWidth = 1;
+                this.ctx.lineCap = 'butt';
+                var grd = this.ctx.createRadialGradient(this.centerCord[0],this.centerCord[1],this.centerCord[0]*2,0,0,0);
+
+                grd.addColorStop(0, "black");
+                grd.addColorStop("0.3", `rgb(255,0,255, ${this.alpha})`);
+                grd.addColorStop("0.5",  `rgb(0,0,255, ${this.alpha})`);
+                grd.addColorStop("0.6",  `rgb(0,255,0, ${this.alpha})`);
+                grd.addColorStop("0.8",  `rgb(255,255,0, ${this.alpha})`);
+                grd.addColorStop(1,  `rgb(255,0,0,${this.alpha})`);
+                this.ctx.strokeStyle=grd;
+
+                let wildcard = Math.random()*2 - 1;
+                //let wildcard = 0;
+
+                //let rotation =
+
+                
+                if (this.spread){
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] - this.offset + wildcard, this.curCord[1] - this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] - this.offset + wildcard, this.curCord[1] + this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] + this.offset + wildcard, this.curCord[1] - this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] + this.offset + wildcard, this.curCord[1] + this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+                }
+                else{
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] - this.offset + wildcard, this.curCord[1] - this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  - this.offset*10 + wildcard, this.prevCord[1] - this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] - this.offset + wildcard, this.curCord[1] + this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  - this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] + this.offset + wildcard, this.curCord[1] - this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] - this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.curCord[0] + this.offset + wildcard, this.curCord[1] + this.offset + wildcard);
+                    this.ctx.lineTo(this.prevCord[0]  + this.offset*10 + wildcard, this.prevCord[1] + this.offset*10 + wildcard);
+                    this.ctx.stroke();
+
+                }
+                
+                this.alpha -= 0.002;
+                this.offset += 0.5;
+               
+            }
+        }
+
+   
+        setCanvasDims = () => {
+            this.canvas.height = window.innerHeight;
+            this.canvas.width = window.innerWidth;
+            this.centerCord = [window.innerWidth / 2, window.innerHeight / 2];
+            
+        }
+        setMouseCords = (e) => {
+            this.prevCord = this.curCord;
+            this.curCord = [e.clientX, e.clientY];
+        }
+        paint = (e) => {
+            window.requestAnimationFrame(paint);
+            this.ctx.clearRect(0, 0, window.innerWidth,window.innerHeight)
+            this.elementList.push(new CoolDiagLine(this.curCord,this.prevCord, this.ctx, this.elementList, this.centerCord, this.spinmode));
+            this.elementList.map(line=>{ line.repaint() })
+            console.log(this.elementList.length);
+           
+        }
+
+
+        window.addEventListener("load", (e)=>{
+            console.log('loaded canvas');
+            this.canvas = document.getElementById("canvas");
+            this.ctx = document.getElementById("canvas").getContext("2d");
+            this.elementList = []
+            this.prevCord = [0,0]
+            this.curCord = [0,0]
+            this.spinmode = false;
+            setCanvasDims(canvas);
+            setMouseCords(e)
+            paint(e);
+
+        })
+       window.addEventListener("resize", setCanvasDims)
+       window.addEventListener("mousemove", setMouseCords)
+       window.addEventListener("click", ()=>{this.spinmode = !this.spinmode})
+    </script>
+</html>
