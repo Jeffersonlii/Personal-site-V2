@@ -52,12 +52,73 @@
     }
   },
   "projects" : {
-    "Where Am I?" : { "desc": "Location Sharing Web App", "redir_component" : "", "link" : "https://github.com/Jeffersonlii/Where-Am-I-", "pic": "../../assets/projects-and-work/whereami/logo.png", "time": "08/01/2019"},
-    "Personal Website" : { "desc": "You're looking at it","redir_component" : "", "link" : "", "pic": "../../assets/projects-and-work/Personal-website/logo.png",  "time": "04/01/2020"},
-    "Gold" : { "desc": "Android Shopping app","redir_component" : "", "link" : "", "pic": "../../assets/projects-and-work/Gold/logo.png",  "time": "11/01/2019"}
+    "Where Am I?" : { 
+      "desc": "Location Sharing Web App",
+      "link" : "https://github.com/Jeffersonlii/Where-Am-I-",
+      "pic": "../../assets/projects-and-work/whereami/logo.png",
+      "time": "08/01/2019",
+      "modal_details": {
+        "Role": ["role1","role2","role3","role4"],
+        "Responsibilities": ["responsibilities1","responsibilities2","responsibilities3","responsibilities3"],
+        "Gains": ["gains1","gains2","gains3","gains4"],
+        "detail_pics": [
+          {
+            "url":"../../assets/projects-and-work/whereami/logo.png",
+            "desc":"desc1"
+          },
+          {
+            "url":"../../assets/projects-and-work/Personal-website/logo.png",
+            "desc":"desc2"
+          },
+          {
+            "url":"../../assets/projects-and-work/Gold/logo.png",
+            "desc":"desc3"
+          },
+          {
+            "url":"../../assets/projects-and-work/temerity/logo.png",
+            "desc":"desc4"
+          }
+        ]
+      }
+    },
+    "Personal Website" : {
+      "desc": "You're looking at it",
+      "link" : "",
+      "pic": "../../assets/projects-and-work/Personal-website/logo.png",
+      "time": "04/01/2020",
+      "modal_details": {
+        "Role": [],
+        "Responsibilities": [],
+        "Gains": [],
+        "detail_pics": []
+      }
+    },
+    "Gold" : {
+      "desc": "Android Shopping app",
+      "link" : "",
+      "pic": "../../assets/projects-and-work/Gold/logo.png",
+      "time": "11/01/2019",
+      "modal_details": {
+        "Roles": [],
+        "Responsibilities": [],
+        "Gains": [],
+        "detail_pics": []
+      }
+    }
   },
   "work exp" : {
-    "Temerity Analytics" : {"desc": "Full Stack Developer", "redir_component" : "", "link" : "https://temerityanalytics.com/", "pic" : "../../assets/projects-and-work/temerity/logo.png", "time": "01/01/2020 - current"}
+    "Temerity Analytics" : {
+      "desc": "Full Stack Developer",
+      "link" : "https://temerityanalytics.com/",
+      "pic" : "../../assets/projects-and-work/temerity/logo.png",
+      "time": "01/01/2020 - current",
+      "modal_details": {
+        "Roles": [],
+        "Responsibilities": [],
+        "Gains": [],
+        "detail_pics": []
+      }
+    }
   },
   "toasts" : {"work" : "Displaying Work Experience", "projects" : "Displaying Projects", "both": "Displaying Work Experience and Projects", "none": "" },
   "footer text": {
@@ -70,7 +131,7 @@
     "LinkedIn": { "link": "https://www.linkedin.com/in/jeffersonlii/", "desc": "See My Experience" },
     "Github": { "link": "https://github.com/Jeffersonlii", "desc": "See My Projects" },
     "Instagram": { "link": "https://www.instagram.com/jeffersonlii/", "desc": "See My Photography" } 
-  }
+  },
+  "dialog-close": "close."
 }
     
-

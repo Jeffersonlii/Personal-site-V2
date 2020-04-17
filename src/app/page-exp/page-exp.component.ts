@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as GlobalStrings from '../../strings.json';
 import {MatSnackBar} from '@angular/material/snack-bar';
-
+import {MatDialog} from '@angular/material/dialog';
+import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 
 @Component({
   selector: 'app-page-exp',
@@ -14,7 +15,7 @@ export class PageExpComponent implements OnInit {
   experiences: { [key: string] : { "redir_component" : string, "link" : string, "pic": string, "time": string}};
   showJobs: boolean = true;
   showProjs: boolean = true;
-  constructor(private _snackBar: MatSnackBar) {
+  constructor(private _snackBar: MatSnackBar, public dialog: MatDialog) {
     this.experiences = {...GlobalStrings.projects, ...GlobalStrings['work exp']}
   }
   ngOnInit(): void {
@@ -65,7 +66,12 @@ export class PageExpComponent implements OnInit {
     return (new Date(b_time)).getTime() - (new Date(a_time)).getTime();
   }
 
-  openDialog(stuff){
-    console.log(stuff)
+  openDialog(project): void {
+    const dialogRef = this.dialog.open(ProjectDialogComponent, {
+      width: '95vh',
+      height: '95vh',
+      data: {project: project}
+    });
   }
+
 }

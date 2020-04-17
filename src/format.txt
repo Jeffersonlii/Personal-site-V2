@@ -1,0 +1,13 @@
+// "category" : {
+//   "name" : {
+//     "desc": "",
+//     "link" : "",
+//     "pic" : "",
+//     "time": "",
+//     "modal_details": {
+//       "Roles": [],
+//       "Responsibilities": [],
+//       "Gains": [],
+//       "detail_pics": []
+//     }
+//   }
