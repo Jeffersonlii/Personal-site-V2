@@ -58,10 +58,14 @@ export class PageExpComponent implements OnInit {
     }
   }
 
-  keyPipeSort(a,b){
+  keyPipeSort(a ,b){
     const a_time = a.value.time.split("-")[0].trim();
     const b_time = b.value.time.split("-")[0].trim();
     
     return (new Date(b_time)).getTime() - (new Date(a_time)).getTime();
+  }
+
+  openDialog(stuff){
+    console.log(stuff)
   }
 }

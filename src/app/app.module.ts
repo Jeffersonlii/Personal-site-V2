@@ -21,8 +21,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavFooterComponent } from './nav-footer/nav-footer.component';
 import { NavFooterSheetComponent } from './nav-footer/nav-footer-sheet/nav-footer-sheet.component';
-import { ProjectBoxesComponent } from './page-exp/project-boxes/project-boxes.component';
 import { DatePipePipe } from './page-exp/date-pipe.pipe';
+import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog.component';
 
 
 
@@ -35,8 +35,8 @@ import { DatePipePipe } from './page-exp/date-pipe.pipe';
     AboutBlockComponent,
     NavFooterComponent,
     NavFooterSheetComponent,
-    ProjectBoxesComponent,
-    DatePipePipe
+    DatePipePipe,
+    ProjectDialogComponent
   ],
   imports: [
     BrowserModule,
