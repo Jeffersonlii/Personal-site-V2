@@ -132,6 +132,10 @@
     "Github": { "link": "https://github.com/Jeffersonlii", "desc": "See My Projects" },
     "Instagram": { "link": "https://www.instagram.com/jeffersonlii/", "desc": "See My Photography" } 
   },
-  "dialog-close": "close."
+  "dialog": {
+    "dialog-close": "close.",
+    "dialog-source": "Click to Open Source"
+  }
+
 }
     

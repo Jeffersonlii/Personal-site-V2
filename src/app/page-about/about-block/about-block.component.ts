@@ -19,7 +19,5 @@ export class AboutBlockComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  defKeyorder(){
-    return 0;
-  }
+  f(){return 0}
 }

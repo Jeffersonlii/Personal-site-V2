@@ -24,8 +24,6 @@ export class NavFooterComponent implements OnInit {
   openBottomSheet(): void {
     this._bottomSheet.open(NavFooterSheetComponent);
   }  
-  defKeyorder(){
-    return 0;
-  }
+  f(){return 0}
   
 }

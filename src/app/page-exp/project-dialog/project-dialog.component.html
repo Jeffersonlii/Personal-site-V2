@@ -2,12 +2,12 @@
 <div  style="display:flex; justify-content: center;">
     <div id="wrapper" >
         <div class="dialog-title-block">
-            <div class="dialog-close" (click)="onNoClick()">{{closeText}}</div>
+            <div class="dialog-close" (click)="onNoClick()">{{globText['dialog-close']}}</div>
     
             <div class="dialog-sub-title-els">
                 {{project.time | datePipe}}
             </div>
-            <a [href]="project.link" target="_blank" class="dialog-title-el">
+            <a [href]="project.link" [matTooltip]=" globText['dialog-source'] " target="_blank" class="dialog-title-el">
                 {{project.name}}
             </a>
             <div class="dialog-sub-title-els">
@@ -17,7 +17,7 @@
     
         <mat-accordion class="all-info">
             <div class="paragraphs">
-                <ng-container  *ngFor="let item of project.modal_details | keyvalue" >
+                <ng-container  *ngFor="let item of project.modal_details | keyvalue: f" >
                     <mat-accordion class="card" *ngIf="item.key != 'detail_pics' ">
                         <mat-expansion-panel [expanded]="true">
                           <mat-expansion-panel-header>

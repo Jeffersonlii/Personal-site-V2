@@ -8,9 +8,9 @@
    
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <div *ngFor="let category of quals['Technical Skills'] | keyvalue: defKeyorder">
+          <div *ngFor="let category of quals['Technical Skills'] | keyvalue: f">
             <div class="font-tertiary-bold">{{category.key}}</div>
-            <div *ngFor="let skill of category.value | keyvalue: defKeyorder" class="skill font-tertiary">
+            <div *ngFor="let skill of category.value | keyvalue: f" class="skill font-tertiary">
               <div  [matTooltip]="skill.value" >
                 {{ skill.key }} 
 
@@ -22,7 +22,7 @@
         </mat-expansion-panel>
     </mat-accordion> 
     <div id="col">
-        <ng-container *ngFor="let skill_category of quals | keyvalue: defKeyorder">
+        <ng-container *ngFor="let skill_category of quals | keyvalue: f">
         
             <mat-accordion *ngIf=" skill_category.key != 'Technical Skills'">
                 <mat-expansion-panel [expanded]="true">
@@ -32,7 +32,7 @@
              
                     </mat-panel-title>
                   </mat-expansion-panel-header>
-                  <div *ngFor="let value of skill_category.value | keyvalue: defKeyorder"
+                  <div *ngFor="let value of skill_category.value | keyvalue: f"
                   class="font-tertiary skill">
                     <div  [matTooltip]="value.value">
                         {{ value.key }}

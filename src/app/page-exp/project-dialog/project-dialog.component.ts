@@ -12,14 +12,14 @@ export interface DialogData {
 })
 export class ProjectDialogComponent implements OnInit {
   project;
-  closeText;
+  globText;
   curPicIndex;
   constructor(
     public dialogRef: MatDialogRef<ProjectDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {
     this.project = {...{'name': data.project.key}, ... data.project.value}
     console.log(this.project)
-    this.closeText = GlobalStrings["dialog-close"]
+    this.globText = GlobalStrings["dialog"]
     this.curPicIndex = -1;
   }
 
@@ -34,4 +34,6 @@ export class ProjectDialogComponent implements OnInit {
     this.curPicIndex += 1
     return this.curPicIndex;
   }
+
+  f(){return 0}
 }

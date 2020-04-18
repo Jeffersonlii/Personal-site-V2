@@ -19,9 +19,7 @@ export class NavFooterSheetComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  defKeyorder(){
-    return 0;
-  }
+  f(){return 0}
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
     this.expandResume = window.innerWidth > 1200;
