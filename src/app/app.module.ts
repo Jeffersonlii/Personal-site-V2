@@ -17,7 +17,6 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavFooterComponent } from './nav-footer/nav-footer.component';
@@ -51,7 +50,6 @@ import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog
     MatDialogModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    MatCardModule,
   ],
   exports: [
     DatePipePipe

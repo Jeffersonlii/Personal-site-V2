@@ -12,7 +12,7 @@ import { ProjectDialogComponent } from './project-dialog/project-dialog.componen
 export class PageExpComponent implements OnInit {
 
 
-  experiences: { [key: string] : { "redir_component" : string, "link" : string, "pic": string, "time": string}};
+  experiences: any;
   showJobs: boolean = true;
   showProjs: boolean = true;
   constructor(private _snackBar: MatSnackBar, public dialog: MatDialog) {
@@ -68,8 +68,11 @@ export class PageExpComponent implements OnInit {
 
   openDialog(project): void {
     const dialogRef = this.dialog.open(ProjectDialogComponent, {
-      width: '95vh',
-      height: '95vh',
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      width: '100vw',
+      height: '100vh',
+
       data: {project: project}
     });
   }

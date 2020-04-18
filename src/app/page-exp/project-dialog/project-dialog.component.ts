@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import * as GlobalStrings from '../../../strings.json';
 
@@ -14,15 +14,16 @@ export class ProjectDialogComponent implements OnInit {
   project;
   closeText;
   curPicIndex;
-  constructor(public dialogRef: MatDialogRef<ProjectDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+  constructor(
+    public dialogRef: MatDialogRef<ProjectDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
     this.project = {...{'name': data.project.key}, ... data.project.value}
     console.log(this.project)
     this.closeText = GlobalStrings["dialog-close"]
     this.curPicIndex = -1;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   onNoClick(): void {
     this.dialogRef.close();
   }

@@ -18,12 +18,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 ::ng-deep .mat-expansion-panel{
-    background: transparent;
+    background-color: transparent !important;
     color: rgba(0,0,0,0); /* transparent */
 }
 ::ng-deep .mat-expansion-panel-header{
     /* styles that were added to panel before */
-    background: transparent;
+    background-color: transparent !important;
     color: rgba(0,0,0,0); /* transparent */
 }
 .mat-expansion-panel-header-title{
@@ -61,45 +61,42 @@ a:link, a:visited, a:hover, a:active {
 .mat-snack-bar-container{
     border-radius: 0 !important;
     box-shadow: none !important;
+    background-color: $colour;
 }
 
 .mat-dialog-container{
-    background-color: $negative-colour;
+    background-color: $colour;
     border-radius: 0 !important;
     box-shadow: none;
 }
+
+.mat-simple-snackbar{
+    background-color: $colour;
+    @extend .font-tertiary;
+    .mat-button{
+        @extend .font-links;
+        color: red !important;
+
+    }
+}
+.mat-button{
+    @extend .font-links;
+}
+
+
+
 html{
     font-size: 14px;
     background-color: $colour;
-
-//     //disable scroll
-//     overflow-y: scroll;
-//     scrollbar-width: none; /* Firefox */
-//     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-
-//     &::-webkit-scrollbar { /* WebKit */
-//         width: 0;
-//         height: 0;
-//     }
 }
 
-::-webkit-scrollbar-track
-{
-	background-color: transparent;
-}   
 
-::-webkit-scrollbar
-{
-	width: 10px;
+::-webkit-scrollbar{
+    width: 10px;
     background-color: transparent;
+    &-track{background-color: transparent;}
+    &-thumb{background-color: red;}
 }
-
-::-webkit-scrollbar-thumb
-{
-    background-color: red;
-
-}
-
 body{
     margin: 0;
 }
