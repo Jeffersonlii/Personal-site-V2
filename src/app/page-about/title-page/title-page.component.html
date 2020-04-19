@@ -3,15 +3,14 @@
         <source src="../../../assets/vids/coded.mp4" type="video/mp4">
       </video> -->
     <div id="positional-box">
-        <div class="desc-name">{{ self_info.name }}</div>
-        <div class="desc-job" *ngFor="let item of self_info.extras">{{item}}</div>
-    
+        <div style="text-align: center;">
+            <div class="desc-name">{{ self_info.name }}</div>
+            <div class="desc-job" *ngFor="let item of self_info.extras">{{item}}</div>
+        </div>
+
     </div>
     <div id="positional-box" class="font-tertiary paragraph">
-        {{paragraph}}
+        <div [innerHTML]="self_info.paragraph"></div>
     </div>
 
-    <!-- <div id="portrait-box">
-
-    </div> -->
 </div>

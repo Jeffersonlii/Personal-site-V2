@@ -25,7 +25,6 @@ import { DatePipePipe } from './page-exp/date-pipe.pipe';
 import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +35,7 @@ import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog
     NavFooterComponent,
     NavFooterSheetComponent,
     DatePipePipe,
-    ProjectDialogComponent
+    ProjectDialogComponent,
   ],
   imports: [
     BrowserModule,

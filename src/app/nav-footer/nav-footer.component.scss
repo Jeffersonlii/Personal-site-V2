@@ -18,6 +18,18 @@
     padding: 10px;
     display: flex;
     align-items: center;
+
+    box-shadow: 0 5px 0 darkred;
+    position: relative;
+
+    &:hover {
+        background-color: #ce0606;
+        cursor: pointer;
+    }
+    &:active {
+        box-shadow: none;
+        top: 5px;
+    }
 }
 
 #footer-box{

@@ -6,6 +6,7 @@
     display: flex;
     overflow: hidden;
     margin-top: -5vh;
+    
 
 
     & #positional-box{
@@ -22,12 +23,15 @@
     }
     & .paragraph{
         text-align: justify;
-   
+        line-height: 2rem;
+
     }
 }
-
 .desc {
+    line-height: 2rem;
+
     &-name{
+        line-height: 5rem;
         @extend .font-primary;
     }
     &-job{        
@@ -40,7 +44,7 @@
 
 @media only screen and (max-width: 1200px) {
     #box #positional-box{
-        width: 70%;
+        width: 100%;
     }
     #box {
         margin-top: 0;

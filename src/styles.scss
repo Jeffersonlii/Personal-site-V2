@@ -1,10 +1,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Roboto:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
+
 $colour: black ;
 $negative-colour: white;
 
 .font { 
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
 }
 //overide globals
 body{
@@ -12,9 +14,12 @@ body{
     z-index: -2;
     background-color: $colour;
 }
-a:link, a:visited, a:hover, a:active {
+a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     color: $negative-colour;
+}
+b{
+    border-bottom: 5px solid rgb(135,206,250,0.7);
 }
 
 ::ng-deep .mat-expansion-panel{
@@ -113,8 +118,9 @@ body{
 .font {
     color: $negative-colour;
     &-primary{
+        font-family: 'GFS Didot', serif;
         @extend .font;
-        font-size: 3rem;
+        font-size: 4rem;
     }
     &-secondary{
         @extend .font;
@@ -135,16 +141,19 @@ body{
         }
     }
     &-links{
+        font-family: 'GFS Didot', serif;
         @extend .font;
-
         font-size: 1.5rem;
 
     }
     &-footer{
+        font-family: 'GFS Didot', serif;
+        font-style: italic;
         @extend .font;
         font-size: 1rem;
     }
 }
+
 .router-link-active{
 
     background-color: black;
@@ -159,7 +168,7 @@ body{
     right: 0;
     left: 0;
     margin: auto;
-    z-index: -1;
+    z-index: -3;
     max-width: 90%;
     margin-right: 24%;
 }

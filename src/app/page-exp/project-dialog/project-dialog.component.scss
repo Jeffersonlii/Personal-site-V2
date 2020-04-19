@@ -43,22 +43,21 @@
     }
     & .dialog-title-el{
         @extend .font-primary;
-        text-align: center;
+        max-width: 60%;
     }
     & .dialog-sub-title-els{
         @extend .font-tertiary;
-        //mix-blend-mode: difference;
-
+        max-width: 60%;
     }
 }
 
 .all-info{
     display: flex;
     .paragraphs{
-        width: 70%;
+        width: 80%;
     }
     .pics{
-        width: 30%;
+        width: 20%;
     }
 }
 @media only screen and (max-width: 1200px) {

@@ -17,7 +17,7 @@
     
         <mat-accordion class="all-info">
             <div class="paragraphs">
-                <ng-container  *ngFor="let item of project.modal_details | keyvalue: f" >
+                <ng-container *ngFor="let item of project.modal_details | keyvalue: f" >
                     <mat-accordion class="card" *ngIf="item.key != 'detail_pics' ">
                         <mat-expansion-panel [expanded]="true">
                           <mat-expansion-panel-header>

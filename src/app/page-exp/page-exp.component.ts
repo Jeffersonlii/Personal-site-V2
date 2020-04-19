@@ -3,6 +3,7 @@ import * as GlobalStrings from '../../strings.json';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
+import { Title }     from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page-exp',
@@ -15,10 +16,12 @@ export class PageExpComponent implements OnInit {
   experiences: any;
   showJobs: boolean = true;
   showProjs: boolean = true;
-  constructor(private _snackBar: MatSnackBar, public dialog: MatDialog) {
+  constructor(private _snackBar: MatSnackBar, public dialog: MatDialog, private titleService: Title) {
     this.experiences = {...GlobalStrings.projects, ...GlobalStrings['work exp']}
   }
   ngOnInit(): void {
+    this.titleService.setTitle( 'Jefferson Li - Experiences' );
+
   }
   filerExp(type: string, $event){
     switch (type) {

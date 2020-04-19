@@ -25,12 +25,11 @@
 
 #nav-background-vid{
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     background-size: 100% 100%;
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
     min-width: 100%;
     min-height: 100%;
     height: inherit;
-    z-index: -1;
 }
