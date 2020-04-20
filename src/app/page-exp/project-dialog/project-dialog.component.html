@@ -27,7 +27,7 @@
                           </mat-expansion-panel-header>
                           <div *ngFor="let item of item.value"
                           class="font-tertiary skill">
-                                {{ item }}
+                            <div [innerHTML]="item"></div>
                           </div>
                         </mat-expansion-panel>
                     </mat-accordion> 
@@ -42,7 +42,7 @@
                                 <mat-panel-title class="font-footer">
                                     Photo : {{item.desc}}
                                 </mat-panel-title>
-                              </mat-expansion-panel-header>
+                            </mat-expansion-panel-header>
                             <div>
                                 <img style="max-width: 100%;max-height: 80% " [src]="item.url">
                             </div>

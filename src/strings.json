@@ -6,7 +6,7 @@
   "paragraph" : ["Fullstack developer specializing in Angular, with a focus in building maintanable and responsive software. <br><br> ",
                  "Currently at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary-bold link' > Temerity Analytics</b></a>.",
                  "Cocurrently pursuing a specialist in software engineering and a minor in statistics at the ",
-                 "<a href='https://www.utoronto.ca/ target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>",
+                 "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>",
                  "<div class='font-footer'> This portfolio shows some of the experiences and skills I've gained throughout my academic career. </div> <br>"
                 ],
   "qualifications" : {
@@ -18,30 +18,31 @@
         "Django/Django REST framwork" : "Worked with the Django REST framwork backend during my time as a fullstack developer for Termerity Analytics.",
         "SQL/PostgreSQL/SQLite" : "Utilized PostgreSQL during my time as a fullstack developer for Termerity Analytics",
         "Asyncronous Programming": "",
-        "Amazon Web Service": ""
+        "Amazon Web Service": "",
+        "Firebase": "Used firebase to host this very site!"
       },
       "General": {
-        "C" : "",
+        "C" : "Achived 93% in C based programming course at UofT",
         "Python": "",
-        "Java": "",
+        "Java": "Demonstrated ",
         "Shell/Bash": "",
         "SVN": "",
-        "GIT": ""
+        "GIT": "Used during my work as a fullstack developer, profficient in resolving conflicts and researching solutions to complex issues"
       },
       "Testing": {
-        "Jasmine/Karma": "",
-        "Postman": "",
-        "Swagger": ""
+        "Jasmine/Karma": "Used to test front end Angular code duing my time as a fullstack developer for Termerity Analytics ",
+        "Postman": "Used to test back end APIs duing my time as a fullstack developer for Termerity Analytics",
+        "Swagger": "Used to Document APIs duing my time as a fullstack developer for Termerity Analytics"
       },
       "Tools":{
         "Windows/MacOS/Linux" : "",
-        "Android Studio": "",
-        "Microsoft Office Suite": "",
-        "Sourcetree": ""
+        "Android Studio": "Used to create numerous Android apps",
+        "Microsoft Office Suite": "Profficient in Word, Excel, Powerpoint",
+        "Sourcetree": "My prefered Git GUI"
       }
     },
     "Education": {
-        "University of Toronto": "",
+        "University of Toronto": "Class of 2023",
         "Software Engineering Specialist, Statistics Minor": "",
         "GPA: 3.82/4.0": ""
     },
@@ -92,10 +93,22 @@
       "pic": "../../assets/projects-and-work/Personal-website/logo.png",
       "time": "04/01/2020",
       "modal_details": {
-        "Role": [],
-        "Responsibilities": [],
-        "Gains": [],
-        "detail_pics": []
+        "Goal": ["To develope an extendable and responsive website showcasing my achivements and experiences"],
+        "Task": ["Rehauled my personal portfolio website using new technologies and frameworks I've learned during my 8 month work term as an full stack developer",
+                 "Used Angular 9 and Material UI to create an aesthetically pleasing design",
+                 "Insured <b>high extensibility</b> by centralizing all strings in <b>strings.json</b>. This allows easy insertion of new projects, and internationalisation",
+                 "Wrote a number of  <b>html canvas </b> scripts for some fun interactivity" ],
+        "Gains": ["Learned html canvas"],
+        "detail_pics": [ 
+          {
+            "url":"../../assets/projects-and-work/Personal-website/strings.PNG",
+            "desc":"strings.json"
+          },
+          {
+            "url":"../../assets/projects-and-work/Personal-website/canvas1.PNG",
+            "desc":"interactive html canvas"
+          }
+        ]
       }
     },
     "Gold" : {

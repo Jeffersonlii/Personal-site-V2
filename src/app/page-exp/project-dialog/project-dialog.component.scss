@@ -33,7 +33,7 @@
     background-color: $colour;
     & .dialog-close{
         color: red;
-        @extend .font-secondary;
+        @extend .font-links;
         align-self: flex-end;
         cursor: pointer;
         position: absolute;
