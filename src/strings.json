@@ -17,13 +17,14 @@
         "Flask" : "Used Flask as backend for 'where am I' webapp",
         "Django/Django REST framwork" : "Worked with the Django REST framwork backend during my time as a fullstack developer for Termerity Analytics.",
         "SQL/PostgreSQL/SQLite" : "Utilized PostgreSQL during my time as a fullstack developer for Termerity Analytics",
-        "Asyncronous Programming": "",
+        "Asyncronous / Reactive Programming": "Experienced in building large structured projects using RxJS archetecture",
         "Amazon Web Service": "",
         "Firebase": "Used firebase to host this very site!"
       },
       "General": {
         "C" : "Achived 93% in C based programming course at UofT",
         "Python": "",
+        "JS / Typescript": "",
         "Java": "Demonstrated ",
         "Shell/Bash": "",
         "SVN": "",
@@ -97,7 +98,7 @@
         "Task": ["Rehauled my personal portfolio website using new technologies and frameworks I've learned during my 8 month work term as an full stack developer",
                  "Used Angular 9 and Material UI to create an aesthetically pleasing design",
                  "Insured <b>high extensibility</b> by centralizing all strings in <b>strings.json</b>. This allows easy insertion of new projects, and internationalisation",
-                 "Wrote a number of  <b>html canvas </b> scripts for some fun interactivity" ],
+                 "Wrote a number of <b>html canvas</b> scripts for some fun interactivity" ],
         "Gains": ["Learned html canvas"],
         "detail_pics": [ 
           {
@@ -131,10 +132,21 @@
       "pic" : "../../assets/projects-and-work/temerity/logo.png",
       "time": "01/01/2020 - current",
       "modal_details": {
-        "Roles": [],
-        "Responsibilities": [],
-        "Gains": [],
-        "detail_pics": []
+        "Role": ["Fullstack developer, developing all aspects of Merln, our cloud based marketing analysis software"],
+        "Responsibilities": [
+          "Develop front end <b>Angular components</b>, as well as backend <b>django RESTful APIs</b>",
+          "Use Angular RxJs architecture to handle asyncronous behaviours",
+          "Carry out devops tooling with AWS",
+          "To proffessionally represent the company during outsite occasions, such as <b>recruitment and data partner visits</b>"
+        ],
+        "Achivements": ["Extensively studied and tested most <b>previously untested</b> front and backend code, using <b>Karma</b> and <b>Postman</b>",
+          "Emphasised the importance of testing, and <b>single handedly pushed and implemented a company wide testing methodology</b>, which did not exist prior to me"],
+        "detail_pics": [     
+          {
+            "url":"../../assets/projects-and-work/temerity/logo.png",
+            "desc":"Mobile app of our marketing "
+          }
+        ]
       }
     }
   },
