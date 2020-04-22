@@ -4,6 +4,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Title }     from '@angular/platform-browser';
+import { DrawersService } from '../drawers.service' 
 
 @Component({
   selector: 'app-page-exp',
@@ -16,7 +17,8 @@ export class PageExpComponent implements OnInit {
   experiences: any;
   showJobs: boolean = true;
   showProjs: boolean = true;
-  constructor(private _snackBar: MatSnackBar, public dialog: MatDialog, private titleService: Title) {
+  constructor( private _drawersService: DrawersService,
+    private _snackBar: MatSnackBar, public dialog: MatDialog, private titleService: Title) {
     this.experiences = {...GlobalStrings.projects, ...GlobalStrings['work exp']}
   }
   ngOnInit(): void {
@@ -79,5 +81,7 @@ export class PageExpComponent implements OnInit {
       data: {project: project}
     });
   }
-
+  emitDrawers(){
+    this._drawersService.openDrawer();
+  }
 }

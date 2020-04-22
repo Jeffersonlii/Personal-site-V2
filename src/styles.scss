@@ -2,14 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Roboto:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+
 $colour: black;
 $negative-colour: white;
 
 .font { 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'GFS Didot', serif;
+
 }
 //overide globals
 body{
+
+    margin: 0;
+    height: 100vh;
+    
     position: relative;
     z-index: -2;
     background-color: $colour;
@@ -35,6 +43,8 @@ b{
     @extend .font-secondary-bold;
 }
 ::ng-deep .mat-expansion-indicator {
+    position: absolute;
+    margin-left: -24px;
     color: red;
 }
 ::ng-deep .mat-expansion-indicator::after {
@@ -88,7 +98,9 @@ b{
     @extend .font-links;
 }
 
-
+.mat-drawer-container{
+    background-color: transparent;
+}
 
 html{
     font-size: 14px;
@@ -102,18 +114,9 @@ html{
     &-track{background-color: transparent;}
     &-thumb{background-color: red;}
 }
-body{
-    margin: 0;
-}
+
 
 //global vars
-
-//body boxes
-#box, #header-box{
-    margin: 2% 20% 0 20%;
-    padding: 1%;
-}
-
 
 .font {
     color: $negative-colour;
@@ -156,10 +159,10 @@ body{
 
 .router-link-active{
 
-    background-color: black;
-    //color: white !important;
+    background-color: white;
     padding: 5px;
-    mix-blend-mode: darken;
+    color: black !important;//temp
+    //mix-blend-mode: difference;
 }
 #background-vid{
     position: fixed;
@@ -173,10 +176,32 @@ body{
     margin-right: 24%;
 }
 
+.bounce-on-hov{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    } 
+}
+
+
+.small-drawer-button{
+    position: fixed;
+    background-color: white;
+    width: 6rem;
+    height: 6rem;
+    margin-top: 90px;
+    border-radius: 0 100px 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
 @media only screen and (max-width: 1200px) {
 
     #box, #header-box{
-        margin: 1% 10% 0 10%;
         padding: 1%;
         flex-direction: column;
         align-items: center;

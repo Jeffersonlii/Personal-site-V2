@@ -17,11 +17,10 @@
     background:transparent;
     height: fit-content;
     border: 0;
-    margin-top: -8.7rem;
     justify-content: unset;
 }
 #exp-box{
-    width: 90%;
+    width: 50%;
     height: 40vh;
     background-color: rgba(255,255,255,1);
     margin: 2rem;
@@ -69,11 +68,6 @@
             width: 50%;
         }
     }
-
-    transition: all .1s ease-in-out;
-}
-#exp-box:hover{
-    //transform: scale(1.01);
 }
 
 

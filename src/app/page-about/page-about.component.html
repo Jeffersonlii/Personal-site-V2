@@ -1,10 +1,16 @@
+<!--nav button-->
+<div class="small-drawer-button bounce-on-hov" (click)="emitDrawers()">
+  <video autoplay muted loop  oncanplay="this.play()" onloadedmetadata="this.muted = true">
+      <source src="../../assets/vids/ocean_Vid2.mp4" type="video/mp4">
+  </video>
+</div>
+
 <!-- top portion (name + desc) -->
 
 <div id="box-top">
 
     <div id="positional-box">
         <div style="text-align: center;">
-            <div class="desc-name">{{ self_info.name }}</div>
             <div class="desc-job" *ngFor="let item of self_info.extras">{{item}}</div>
         </div>
 

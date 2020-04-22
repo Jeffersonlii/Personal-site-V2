@@ -14,24 +14,24 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
-
-import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { NavFooterComponent } from './nav-footer/nav-footer.component';
 import { NavFooterSheetComponent } from './nav-footer/nav-footer-sheet/nav-footer-sheet.component';
 import { DatePipePipe } from './page-exp/date-pipe.pipe';
 import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog.component';
+import { PageNameComponent } from './page-name/page-name.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavHeaderComponent,
     pageComponents,
     NavFooterComponent,
     NavFooterSheetComponent,
     DatePipePipe,
     ProjectDialogComponent,
+    PageNameComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +45,7 @@ import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog
     MatDialogModule,
     MatCheckboxModule,
     MatSnackBarModule,
+    MatSidenavModule,
   ],
   exports: [
     DatePipePipe

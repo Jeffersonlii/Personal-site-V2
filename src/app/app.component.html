@@ -1,4 +1,38 @@
-<app-nav-header></app-nav-header>
-<img src="../assets/vids/goded.gif" alt="" id="background-vid">
-<router-outlet></router-outlet>
-<app-nav-footer></app-nav-footer>
+
+
+<mat-drawer-container class="drawer-container" hasBackdrop="True">
+    <mat-drawer #drawer mode="Over"  >
+        <div id ="left-panel">
+            <a (click)="toggleDrawers()"
+               [routerLink]="['/about']"
+               class="bounce-on-hov"
+               routerLinkActive="router-link-active" > About me.</a>
+        </div>
+    </mat-drawer>
+    <mat-drawer #drawerEnd position="end" >
+        <div id ="right-panel">
+            <div id ="left-panel">
+                <a (click)="toggleDrawers()"
+                [routerLink]="['/exp']"
+                class="bounce-on-hov"
+                routerLinkActive="router-link-active" > Experience.</a>
+            </div>
+            <div id="close" class="bounce-on-hov"(click)="toggleDrawers()">
+                {{ closeText }}
+            </div>
+        </div>
+    </mat-drawer>
+
+    <mat-drawer-content>
+   
+        <audio id="music" autoplay loop>
+            <source src="../assets/vids/clair.mp3">
+        </audio>
+        <img src="../assets/vids/goded.gif" alt="" id="background-vid">
+        <router-outlet></router-outlet>
+        <!-- <app-nav-header></app-nav-header> -->
+        
+        <app-nav-footer></app-nav-footer>
+    </mat-drawer-content>
+</mat-drawer-container>
+  

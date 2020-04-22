@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageAboutComponent } from './page-about/page-about.component';
 import { PageExpComponent } from './page-exp/page-exp.component';
+import { PageNameComponent } from './page-name/page-name.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'about', pathMatch: 'full'}, 
+  {
+    path: '', 
+    component: PageNameComponent,
+  }, 
   {
     path: 'about',
     component: PageAboutComponent,

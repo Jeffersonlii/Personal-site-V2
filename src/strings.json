@@ -3,11 +3,10 @@
  {
   "my_name" : "Jefferson Li.",
   "short_desc" : [],
-  "paragraph" : ["Fullstack developer specializing in Angular, with a focus in building maintanable and responsive software. <br><br> ",
-                 "Currently at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary-bold link' > Temerity Analytics</b></a>.",
+  "paragraph" : ["I am a full stack developer specializing in Angular, with a focus in building maintanable and responsive software. <br><br> ",
+                 "Currently at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary-bold link' > Temerity Analytics</b></a>.<br>",
                  "Cocurrently pursuing a specialist in software engineering and a minor in statistics at the ",
-                 "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>",
-                 "<div class='font-footer'> This portfolio shows some of the experiences and skills I've gained throughout my academic career. </div> <br>"
+                 "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>"
                 ],
   "qualifications" : {
     "Technical Skills": {
