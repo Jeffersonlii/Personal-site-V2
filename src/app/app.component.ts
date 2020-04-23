@@ -15,10 +15,18 @@ export class AppComponent {
   @ViewChild('drawerEnd', { static: true }) drawerEnd: MatSidenav;
   title = 'Personal-site-V2';
   closeText;
+  aboutmeText;
+  expText;
   constructor(private _drawersService: DrawersService){
     this.closeText = GlobalStrings.dialog["dialog-close"];
+
+
     _drawersService.DrawerSubject$.subscribe(()=>{
       this.toggleDrawers()
+    })
+    _drawersService.TransSubject$.subscribe(()=>{
+      console.log('got')
+      this.transition()
     })
   }
   ngOnInit(){
@@ -26,7 +34,18 @@ export class AppComponent {
     vid.volume = 0.5;
   }
   toggleDrawers(){
+    this.aboutmeText = GlobalStrings["page-titles"][0];
+    this.expText = GlobalStrings["page-titles"][1];
     this.drawer.toggle();
-    this.drawerEnd.toggle()
+    this.drawerEnd.toggle();
+  }
+  transition(){
+    this.aboutmeText = this.expText = ''
+    this.drawer.toggle();
+    this.drawerEnd.toggle();
+    setTimeout(()=>{
+      this.drawer.toggle();
+      this.drawerEnd.toggle();
+    },500)
   }
 }

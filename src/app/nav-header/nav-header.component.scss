@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+#header-box{
+    width: auto;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    background-color: $negative-colour;
+    top: 0px;
+    flex-direction: row;
+    border-bottom: 1px black solid;
+    z-index: 9;
+    & #page-type{
+        @extend .font-secondary;
+        color: $colour;
+    }
+    & .name-link{
+        @extend .font-secondary;
+        color: $colour;
+
+    }
+}

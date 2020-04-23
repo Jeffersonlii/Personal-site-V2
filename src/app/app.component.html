@@ -1,22 +1,29 @@
 
 
 <mat-drawer-container class="drawer-container" hasBackdrop="True">
+
     <mat-drawer #drawer mode="Over"  >
         <div id ="left-panel">
-            <a (click)="toggleDrawers()"
+            <!-- <video autoplay muted loop id="footer-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
+                <source src="../assets/vids/Tunnel.mp4" type="video/mp4">
+            </video> -->
+            <a *ngIf="aboutmeText"
+               (click)="toggleDrawers()"
                [routerLink]="['/about']"
                class="bounce-on-hov"
-               routerLinkActive="router-link-active" > About me.</a>
+               routerLinkActive="router-link-active" > {{aboutmeText}}</a>
         </div>
     </mat-drawer>
     <mat-drawer #drawerEnd position="end" >
         <div id ="right-panel">
-            <div id ="left-panel">
-                <a (click)="toggleDrawers()"
-                [routerLink]="['/exp']"
-                class="bounce-on-hov"
-                routerLinkActive="router-link-active" > Experience.</a>
-            </div>
+            <!-- <video autoplay muted loop id="footer-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
+                <source src="../assets/vids/Tunnel.mp4" type="video/mp4">
+            </video> -->
+            <a *ngIf="expText"
+            (click)="toggleDrawers()"
+            [routerLink]="['/exp']"
+            class="bounce-on-hov"
+            routerLinkActive="router-link-active" > {{expText}}</a>
             <div id="close" class="bounce-on-hov"(click)="toggleDrawers()">
                 {{ closeText }}
             </div>
@@ -24,10 +31,7 @@
     </mat-drawer>
 
     <mat-drawer-content>
-   
-        <audio id="music" autoplay loop>
-            <source src="../assets/vids/clair.mp3">
-        </audio>
+
         <img src="../assets/vids/goded.gif" alt="" id="background-vid">
         <router-outlet></router-outlet>
         <!-- <app-nav-header></app-nav-header> -->
@@ -35,4 +39,9 @@
         <app-nav-footer></app-nav-footer>
     </mat-drawer-content>
 </mat-drawer-container>
-  
+
+<!-- <audio id="music" autoplay loop>
+    <source src="../assets/vids/clair.mp3">
+</audio> -->
+
+<iframe id="music" src="../assets/vids/clair.mp3" frameborder="0" allow='autoplay'></iframe>

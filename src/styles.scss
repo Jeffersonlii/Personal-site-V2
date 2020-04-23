@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Roboto:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap');
 $colour: black;
 $negative-colour: white;
 
 .font { 
     font-family: 'Lato', sans-serif;
-    font-family: 'GFS Didot', serif;
+    font-weight: 300;
+    //font-family: 'GFS Didot', serif;
 
 }
 //overide globals
@@ -45,10 +45,10 @@ b{
 ::ng-deep .mat-expansion-indicator {
     position: absolute;
     margin-left: -24px;
-    color: red;
+    color: $colour;
 }
 ::ng-deep .mat-expansion-indicator::after {
-    color: red;
+    color: $colour;
 }
 
 ::ng-deep .mat-bottom-sheet-container{
@@ -73,6 +73,9 @@ b{
     @extend .font-tertiary;
 }
 
+.mat-checkbox-checked.mat-warn .mat-checkbox-background{
+    background-color: black;
+}
 .mat-snack-bar-container{
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -90,7 +93,7 @@ b{
     @extend .font-tertiary;
     .mat-button{
         @extend .font-links;
-        color: red !important;
+        color: $colour !important;
 
     }
 }
@@ -112,7 +115,7 @@ html{
     width: 10px;
     background-color: transparent;
     &-track{background-color: transparent;}
-    &-thumb{background-color: red;}
+    &-thumb{background-color: $negative-colour;}
 }
 
 
@@ -121,7 +124,9 @@ html{
 .font {
     color: $negative-colour;
     &-primary{
-        font-family: 'GFS Didot', serif;
+        font-weight: 100;
+
+        //font-family: 'GFS Didot', serif;
         @extend .font;
         font-size: 4rem;
     }
@@ -131,7 +136,7 @@ html{
         font-size: 1.5rem;
         &-bold{
             @extend .font-secondary;
-            font-weight: 700;
+            font-weight: 400;
         }
     }
     &-tertiary{
@@ -140,17 +145,17 @@ html{
         font-size: 1.25rem;
         &-bold{
             @extend .font-tertiary;
-            font-weight: 700;
+            font-weight: 400;
         }
     }
     &-links{
-        font-family: 'GFS Didot', serif;
+        //font-family: 'GFS Didot', serif;
         @extend .font;
         font-size: 1.5rem;
 
     }
     &-footer{
-        font-family: 'GFS Didot', serif;
+        //font-family: 'GFS Didot', serif;
         font-style: italic;
         @extend .font;
         font-size: 1rem;
@@ -187,7 +192,7 @@ html{
 
 .small-drawer-button{
     position: fixed;
-    background-color: white;
+    background-color: $colour;
     width: 6rem;
     height: 6rem;
     margin-top: 90px;
@@ -196,6 +201,11 @@ html{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    @extend .bounce-on-hov;
+    &:hover{
+        transform: scale(1.1);
+        width: 30rem;
+    } 
 }
 
 

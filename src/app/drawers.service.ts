@@ -8,7 +8,13 @@ export class DrawersService {
 
   private DrawerSubject = new Subject<any>();
   DrawerSubject$ = this.DrawerSubject.asObservable();
+
+  private TransSubject = new Subject<any>();
+  TransSubject$ = this.TransSubject.asObservable();
   openDrawer() {
     this.DrawerSubject.next();
+  }
+  transition(){
+    this.TransSubject.next();
   }
 }

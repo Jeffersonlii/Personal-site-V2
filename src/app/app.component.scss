@@ -21,21 +21,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     a{
         @extend .font-primary;
+        position: relative;
+    }
+    video{
+        position: absolute;
+        height: 100%;
     }
 }
 
 #right-panel{
     #close{
-        color: red;
+        color: $colour;
         @extend .font-links;
         align-self: flex-end;
         cursor: pointer;
         position: absolute;
         z-index: 9;
         padding: 20px;
-        background-color: $colour;
+        background-color: $negative-colour;
         top: 20px;
         right: 20px;
         cursor: pointer;
@@ -48,4 +54,8 @@
 }
 #right-panel{
     background-color: black;
+}
+
+#music{
+    display: none;
 }

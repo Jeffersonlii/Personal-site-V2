@@ -21,6 +21,7 @@ import { NavFooterSheetComponent } from './nav-footer/nav-footer-sheet/nav-foote
 import { DatePipePipe } from './page-exp/date-pipe.pipe';
 import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog.component';
 import { PageNameComponent } from './page-name/page-name.component';
+import { NavHeaderComponent } from './nav-header/nav-header.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PageNameComponent } from './page-name/page-name.component';
     DatePipePipe,
     ProjectDialogComponent,
     PageNameComponent,
+    NavHeaderComponent,
   ],
   imports: [
     BrowserModule,

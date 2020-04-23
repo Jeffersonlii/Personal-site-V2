@@ -1,6 +1,9 @@
+   
+<app-nav-header [page]=" 'Home.' ">
+</app-nav-header>
 <div id="box">
     <div id="content-box" class="bounce-on-hov" (click)="emitDrawers()">
-        <video autoplay muted loop id="nav-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
+        <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true">
             <source src="../../assets/vids/sky vid.mp4" type="video/mp4">
         </video>
         <div id="name-box">
