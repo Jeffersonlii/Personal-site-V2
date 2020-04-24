@@ -6,14 +6,14 @@
         {{name}}
     </a>
     <div id="page-type" [ngClass]="{expanded: dropDownExpanded}">
-        <div class="type" [ngClass]="{'unexpanded-page': !dropDownExpanded}" (click)="onclickNav()">
+        <div class="type" [ngClass]="{'expanded': dropDownExpanded}" (click)="onclickNav()">
             {{page}}
         </div>
-        <div class="type" [ngClass]="{hiddenNavs: !dropDownExpanded}" (click)="transition(redirMap[other2[0]])">
-            {{other2[0]}}
+        <div class="type" [ngClass]="{'expanded': dropDownExpanded, 'hide-when-not-expanded': !dropDownExpanded}" (click)="transition(redirMap[other2Pages[0]])">
+            {{other2Pages[0]}}
         </div>
-        <div class="type" [ngClass]="{hiddenNavs: !dropDownExpanded}" (click)="transition(redirMap[other2[1]])">
-            {{other2[1]}}
+        <div class="type" [ngClass]="{'expanded': dropDownExpanded, 'hide-when-not-expanded': !dropDownExpanded}" (click)="transition(redirMap[other2Pages[1]])">
+            {{other2Pages[1]}}
         </div>
     </div>    
 </div>

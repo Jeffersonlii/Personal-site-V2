@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as GlobalStrings from './../../strings.json';
 import { DrawersService } from './../drawers.service' 
 import { Router } from '@angular/router';
@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 })
 export class NavHeaderComponent implements OnInit {
   @Input() page: string;
-  @ViewChild('navdrop') navdrop: ElementRef;
-  @ViewChild('navText') navText: ElementRef;
   name;
   dropDownExpanded;
 
@@ -19,18 +17,16 @@ export class NavHeaderComponent implements OnInit {
     [GlobalStrings["page-titles"][1]] : '/exp',
     [GlobalStrings["page-titles"][2]] : '/',
   }
-  other2;
+  other2Pages;
   constructor(
     private _drawersService: DrawersService,
-    private router: Router,
-    private renderer: Renderer2) {
+    private router: Router) {
     this.name = GlobalStrings.my_name;
     this.dropDownExpanded = false;
    }
 
   ngOnInit(): void {
-    console.log(this.page)
-    this.other2 = GlobalStrings["page-titles"].filter(el=>el != this.page);
+    this.other2Pages = GlobalStrings["page-titles"].filter(el=>el != this.page);
   }
 
   onclickNav(){
