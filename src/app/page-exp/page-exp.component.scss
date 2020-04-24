@@ -72,6 +72,9 @@
 
 
 @media only screen and (max-width: 1200px) {
+    #exp-box{
+        width: unset;
+    }
     #exp-box .pic{
         display: none;
     }

@@ -2,7 +2,7 @@
 
  {
   "my_name" : "Jefferson Li.",
-  "page-titles": ["About me.", "Experiences"],
+  "page-titles": ["About me.", "Experiences.", "Home."],
   "short_desc" : [],
   "paragraph" : ["I am a full stack developer specializing in Angular, with a focus in building maintanable and responsive software. <br><br> ",
                  "Currently developing at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary-bold link' > Temerity Analytics</b></a>.<br>",

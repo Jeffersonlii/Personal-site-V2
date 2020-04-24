@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Title }     from '@angular/platform-browser';
 import * as GlobalStrings from '../../strings.json';
@@ -11,12 +12,13 @@ import { DrawersService } from '../drawers.service'
 export class PageAboutComponent implements OnInit {
   self_info: {extras:string[], paragraph: string} = {extras: [], paragraph: ''};
   quals;
+  page
 
   constructor(private titleService: Title, private _drawersService: DrawersService) {
     this.self_info.paragraph = GlobalStrings.paragraph.join(' ')
     this.self_info.extras = GlobalStrings.short_desc;
     this.quals = GlobalStrings.qualifications
-    
+    this.page = GlobalStrings["page-titles"][0]
    }
 
   ngOnInit(): void {

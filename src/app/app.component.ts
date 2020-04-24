@@ -25,7 +25,6 @@ export class AppComponent {
       this.toggleDrawers()
     })
     _drawersService.TransSubject$.subscribe(()=>{
-      console.log('got')
       this.transition()
     })
   }

@@ -11,7 +11,10 @@ import { Title }     from '@angular/platform-browser';
 export class PageNameComponent implements OnInit {
   @Output() openDrawers = new EventEmitter<boolean>();
   name = {name: ''};
-  constructor( private _drawersService: DrawersService, private titleService: Title) {}
+  page;
+  constructor( private _drawersService: DrawersService, private titleService: Title) {
+    this.page = GlobalStrings["page-titles"][2]
+  }
 
   ngOnInit(): void {
     setTimeout(()=>this.typeit(this.name, 'name', GlobalStrings.my_name, 100),600)

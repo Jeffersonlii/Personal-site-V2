@@ -17,9 +17,11 @@ export class PageExpComponent implements OnInit {
   experiences: any;
   showJobs: boolean = true;
   showProjs: boolean = true;
+  page;
   constructor( private _drawersService: DrawersService,
     private _snackBar: MatSnackBar, public dialog: MatDialog, private titleService: Title) {
     this.experiences = {...GlobalStrings.projects, ...GlobalStrings['work exp']}
+    this.page = GlobalStrings["page-titles"][1]
   }
   ngOnInit(): void {
     this.titleService.setTitle( 'Jefferson Li - Experiences' );

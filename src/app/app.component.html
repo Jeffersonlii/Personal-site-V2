@@ -19,14 +19,18 @@
             <!-- <video autoplay muted loop id="footer-background-vid"  oncanplay="this.play()" onloadedmetadata="this.muted = true">
                 <source src="../assets/vids/Tunnel.mp4" type="video/mp4">
             </video> -->
-            <a *ngIf="expText"
-            (click)="toggleDrawers()"
-            [routerLink]="['/exp']"
-            class="bounce-on-hov"
-            routerLinkActive="router-link-active" > {{expText}}</a>
-            <div id="close" class="bounce-on-hov"(click)="toggleDrawers()">
-                {{ closeText }}
-            </div>
+            <ng-container *ngIf="expText">
+                <a 
+                (click)="toggleDrawers()"
+                [routerLink]="['/exp']"
+                class="bounce-on-hov"
+                routerLinkActive="router-link-active" > {{expText}}</a>
+                <div id="close" class="bounce-on-hov"(click)="toggleDrawers()">
+                    {{ closeText }}
+                </div>
+
+            </ng-container>
+           
         </div>
     </mat-drawer>
 
