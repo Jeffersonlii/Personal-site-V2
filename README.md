@@ -21,5 +21,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Deployment
 
-Run `firebase deploy` after `ng build --prod` to deploy to  [Jeffersonli.dev](http://www.Jeffersonli.dev)
+Run `firebase deploy` after `ng build --prod` to deploy to  [Jeffersonli.dev](https://jeffersonli.dev/)
 
