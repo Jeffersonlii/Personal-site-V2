@@ -5,7 +5,7 @@
     align-items: center;
 }
 #checks{
-    background-color: rgba(255,255,255,1);;
+    background-color: $negative-colour;
     width: fit-content;
     padding: 20px;
     mat-checkbox{
@@ -22,7 +22,7 @@
 #exp-box{
     width: 50%;
     height: 40vh;
-    background-color: rgba(255,255,255,1);
+    background-color: $negative-colour;
     margin: 2rem;
     //border-radius: 25px 0 0 25px;
     display: flex;
@@ -73,7 +73,7 @@
 
 @media only screen and (max-width: 1200px) {
     #exp-box{
-        width: unset;
+        width: 80%;
     }
     #exp-box .pic{
         display: none;

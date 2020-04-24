@@ -9,7 +9,7 @@
     background-color: $negative-colour;
     top: 0px;
     flex-direction: row;
-    border-bottom: 1px black solid;
+    border-bottom: 1px $colour solid;
     z-index: 9;
   
     & #page-type{

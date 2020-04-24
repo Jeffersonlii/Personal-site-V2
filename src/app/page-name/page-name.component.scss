@@ -2,6 +2,7 @@
 
 #name-box{
     @extend .font-primary;
+    color: white;
     position: relative;
     mix-blend-mode: difference;
 }
