@@ -23,3 +23,4 @@ Run `firebase deploy` after `ng build --prod` to deploy to  [Jeffersonli.dev](ht
  - Might be spelling/grammer errors in strings.json
  - Not all strings may be centralized in strings.json
  - mobile scrolling bug in mat-accordian in `about me.` page
+ - mobile text clipping on nav sliders
