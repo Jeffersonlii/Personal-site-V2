@@ -7,9 +7,18 @@
             <div class="dialog-sub-title-els">
                 {{project.time | datePipe}}
             </div>
-            <a [href]="project.link" [matTooltip]=" globText['dialog-source'] " target="_blank" class="dialog-title-el">
-                {{project.name}}
-            </a>
+
+            <ng-container *ngIf="project.link">
+                <a [href]="project.link" [matTooltip]=" globText['dialog-source'] " target="_blank" class="dialog-title-el">
+                    {{project.name}}
+                </a>
+            </ng-container>
+            <ng-container *ngIf="!project.link">
+                <a class="dialog-title-el">
+                    {{project.name}}
+                </a>
+            </ng-container>
+
             <div class="dialog-sub-title-els">
                 {{project.desc}}
             </div>

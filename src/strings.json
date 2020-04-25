@@ -28,7 +28,8 @@
         "Java": "Demonstrated ",
         "Shell/Bash": "",
         "SVN": "",
-        "GIT": "Used during my work as a fullstack developer, profficient in resolving conflicts and researching solutions to complex issues"
+        "GIT": "Used during my work as a fullstack developer, profficient in resolving conflicts and researching solutions to complex issues",
+        "Agile": ""
       },
       "Testing": {
         "Jasmine/Karma": "Used to test front end Angular code duing my time as a fullstack developer for Termerity Analytics ",
@@ -65,25 +66,22 @@
       "pic": "../../assets/projects-and-work/whereami/logo.png",
       "time": "08/01/2019",
       "modal_details": {
-        "Role": ["role1","role2","role3","role4"],
-        "Responsibilities": ["responsibilities1","responsibilities2","responsibilities3","responsibilities3"],
-        "Gains": ["gains1","gains2","gains3","gains4"],
+        "Goal": ["To develop an app that allows users to sharer their location through a single link",
+                 "Motivated by when I wanted to share my location with my parents, who did not use social media.",
+                 "I realized there was not a tool that can painlessly share location, I decided to create one",
+                 "The key feature of this project is its simplicity, sharing through a link implies no downloading, no signup, just sharing."],
+        "My Tasks": ["Used Python (flask) for backend, to update and retrieve user coordinates using a SQL database",
+                     "Generates link for every user, for sharing unique locations",
+                     "Used Ajax to pass coordinate data from Python to JS and vice versa"],
+        "Result": ["Gained experience in Google API and AJAX calls"],
         "detail_pics": [
           {
-            "url":"../../assets/projects-and-work/whereami/logo.png",
-            "desc":"desc1"
+            "url":"../../assets/projects-and-work/whereami/1st.PNG",
+            "desc":"Shared link page"
           },
           {
-            "url":"../../assets/projects-and-work/Personal-website/logo.png",
-            "desc":"desc2"
-          },
-          {
-            "url":"../../assets/projects-and-work/Gold/logo.png",
-            "desc":"desc3"
-          },
-          {
-            "url":"../../assets/projects-and-work/temerity/logo.png",
-            "desc":"desc4"
+            "url":"../../assets/projects-and-work/whereami/2nd.PNG",
+            "desc":"Map Page"
           }
         ]
       }
@@ -95,11 +93,10 @@
       "time": "04/01/2020",
       "modal_details": {
         "Goal": ["To develope an extendable and responsive website showcasing my achivements and experiences"],
-        "Task": ["Rehauled my personal portfolio website using new technologies and frameworks I've learned during my 8 month work term as an full stack developer",
+        "My Tasks": ["Rehauled my personal portfolio website using new technologies and frameworks I've learned during my 8 month work term as an full stack developer",
                  "Used Angular 9 and Material UI to create an aesthetically pleasing design",
                  "Insured <b>high extensibility</b> by centralizing all strings in <b>strings.json</b>. This allows easy insertion of new projects, and internationalisation",
                  "Wrote a number of <b>html canvas</b> scripts for some fun interactivity" ],
-        "Gains": ["Learned html canvas"],
         "detail_pics": [ 
           {
             "url":"../../assets/projects-and-work/Personal-website/strings.PNG",
@@ -113,15 +110,29 @@
       }
     },
     "Gold" : {
-      "desc": "Android Shopping app",
+      "desc": "Android Shopping App",
       "link" : "",
       "pic": "../../assets/projects-and-work/Gold/logo.png",
       "time": "11/01/2019",
       "modal_details": {
-        "Roles": [],
-        "Responsibilities": [],
-        "Gains": [],
-        "detail_pics": []
+        "Goal": ["To develop a shopping android app with a 3 person team for a software design class",
+                 "To utilize <b>SOLID principles</b>, <b>design patterns</b>, and the <b>Scrum Methodology</b> during development."],
+        "My Tasks": ["Made use of <b>abstration and interfaces</b> to design highly flexible and object oriented codebase",
+                     "Planned around <b>Model View Controller</b> to attain an organized archetecture",
+                     "Designed and implemented a visually pleasing design that received <b>direct praise</b> from the TA",
+                     "Organized <b>Scrum meetings</b> 2 times per week to discuss progress"],
+        "Result": ["Advanced my skills as a Android developer",
+                   "Scored a <b>100%</b> on this project that is worth 40% of final grade"],
+        "detail_pics": [
+        {
+          "url":"../../assets/projects-and-work/Gold/moe.PNG",
+          "desc":"TA comments after grading"
+        }, 
+        {
+          "url":"../../assets/projects-and-work/Gold/login.jpg",
+          "desc":"Login and Cart Page"
+        }
+      ]
       }
     }
   },
@@ -143,8 +154,8 @@
           "Emphasised the importance of testing, and <b>single handedly pushed and implemented a company wide testing methodology</b>, which did not exist prior to me"],
         "detail_pics": [     
           {
-            "url":"../../assets/projects-and-work/temerity/logo.png",
-            "desc":"Mobile app of our marketing "
+            "url":"../../assets/projects-and-work/temerity/many.jpg",
+            "desc":"Recruiting Event at UTSC"
           }
         ]
       }

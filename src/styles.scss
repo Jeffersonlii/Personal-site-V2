@@ -44,12 +44,11 @@ b{
     @extend .font-secondary-bold;
 }
 ::ng-deep .mat-expansion-indicator {
-    position: absolute;
     margin-left: -24px;
-    color: $colour;
+    color: $negative-colour;
 }
 ::ng-deep .mat-expansion-indicator::after {
-    color: $colour;
+    color: $negative-colour;
 }
 
 ::ng-deep .mat-bottom-sheet-container{
