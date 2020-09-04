@@ -1,67 +1,73 @@
+<div style="display: flex; justify-content: center">
+  <div id="wrapper">
+    <div class="dialog-title-block">
+      <div class="dialog-close" (click)="onNoClick()">
+        {{ globText["dialog-close"] }}
+      </div>
 
-<div  style="display:flex; justify-content: center;">
-    <div id="wrapper" >
-        <div class="dialog-title-block">
-            <div class="dialog-close" (click)="onNoClick()">{{globText['dialog-close']}}</div>
-    
-            <div class="dialog-sub-title-els">
-                {{project.time | datePipe}}
-            </div>
+      <div class="dialog-sub-title-els">
+        {{ project.time | datePipe }}
+      </div>
 
-            <ng-container *ngIf="project.link">
-                <a [href]="project.link" [matTooltip]=" globText['dialog-source'] " target="_blank" class="dialog-title-el">
-                    {{project.name}}
-                </a>
-            </ng-container>
-            <ng-container *ngIf="!project.link">
-                <a class="dialog-title-el">
-                    {{project.name}}
-                </a>
-            </ng-container>
+      <ng-container *ngIf="project.link">
+        <a
+          [href]="project.link"
+          [matTooltip]="globText['dialog-source']"
+          target="_blank"
+          class="dialog-title-el"
+        >
+          {{ project.name }}
+        </a>
+      </ng-container>
+      <ng-container *ngIf="!project.link">
+        <a class="dialog-title-el">
+          {{ project.name }}
+        </a>
+      </ng-container>
 
-            <div class="dialog-sub-title-els">
-                {{project.desc}}
-            </div>
-        </div>
-    
-        <mat-accordion class="all-info">
-            <div class="paragraphs">
-                <ng-container *ngFor="let item of project.modal_details | keyvalue: f" >
-                    <mat-accordion class="card" *ngIf="item.key != 'detail_pics' ">
-                        <mat-expansion-panel [expanded]="true">
-                          <mat-expansion-panel-header>
-                            <mat-panel-title >
-                                {{item.key}}
-                            </mat-panel-title>
-                          </mat-expansion-panel-header>
-                          <div *ngFor="let item of item.value"
-                          class="font-tertiary skill">
-                            <div [innerHTML]="item"></div>
-                          </div>
-                        </mat-expansion-panel>
-                    </mat-accordion> 
-                </ng-container>
-            </div>
-            
-            <div class="pics">
-                <ng-container  *ngFor="let item of project.modal_details.detail_pics" >
-                    <mat-accordion class="card" >
-                        <mat-expansion-panel [expanded]="true">
-                            <mat-expansion-panel-header>
-                                <mat-panel-title class="font-footer">
-                                    Photo : {{item.desc}}
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div>
-                                <img style="max-width: 100%;max-height: 80% " [src]="item.url">
-                            </div>
-                        </mat-expansion-panel>
-                    </mat-accordion> 
-    
-                </ng-container>
-            </div>
-         
-        </mat-accordion>
+      <div class="dialog-sub-title-els">
+        {{ project.desc }}
+      </div>
     </div>
-</div>
 
+    <mat-accordion class="all-info">
+      <div class="paragraphs">
+        <ng-container *ngFor="let item of project.modal_details | keyvalue: f">
+          <mat-accordion class="card" *ngIf="item.key != 'detail_pics'">
+            <mat-expansion-panel [expanded]="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ item.key }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngFor="let item of item.value" class="font-tertiary skill">
+                <div [innerHTML]="item"></div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </ng-container>
+      </div>
+
+      <div class="pics">
+        <ng-container *ngFor="let item of project.modal_details.detail_pics">
+          <mat-accordion class="card">
+            <mat-expansion-panel [expanded]="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="font-footer">
+                  Photo : {{ item.desc }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div>
+                <img
+                  style="max-width: 100%; max-height: 80%"
+                  [src]="item.url"
+                  (click)="expandImg(item.url)"
+                />
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </ng-container>
+      </div>
+    </mat-accordion>
+  </div>
+</div>

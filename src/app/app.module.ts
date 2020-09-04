@@ -22,6 +22,7 @@ import { DatePipePipe } from './page-exp/date-pipe.pipe';
 import { ProjectDialogComponent } from './page-exp/project-dialog/project-dialog.component';
 import { PageNameComponent } from './page-name/page-name.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { ExpandImgComponent } from './page-exp/project-dialog/expand-img/expand-img.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
     ProjectDialogComponent,
     PageNameComponent,
     NavHeaderComponent,
+    ExpandImgComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,39 +1,40 @@
-
-<app-nav-header [page]=" page ">
-</app-nav-header>
+<app-nav-header [page]="page"> </app-nav-header>
 
 <div id="box">
-    <div id="exp-box" class="check-box">
-        <div id="checks">
-            <mat-checkbox 
-            color="warn"
-            [checked]="true"
-            (change)="filerExp('work', $event)" >Work</mat-checkbox>
-            <mat-checkbox 
-            color="warn"
-            [checked]="true"
-            (change)="filerExp('projects', $event)">Projects</mat-checkbox>
-        </div>
+  <div id="exp-box" class="check-box">
+    <div id="checks">
+      <mat-checkbox
+        color="warn"
+        [checked]="true"
+        (change)="filerExp('work', $event)"
+        >Work</mat-checkbox
+      >
+      <mat-checkbox
+        color="warn"
+        [checked]="true"
+        (change)="filerExp('projects', $event)"
+        >Projects</mat-checkbox
+      >
     </div>
+  </div>
 
-    <ng-container *ngFor="let item of experiences | keyvalue: keyPipeSort">
-        <div id="exp-box" class="bounce-on-hov" (click)="openDialog(item)">
-            <div class="title-block" [ngClass]="{ifNoPic: item.value.pic === '' }">
-                <div class="sub-title-els">
-                    {{item.value.time | datePipe}}
-                </div>
-
-                <div class="title-el">
-                    {{item.key}}
-                </div>
-                <div class="sub-title-els">
-                    {{item.value.desc}}
-                </div>
-                
-            </div>
-            <div class="pic" *ngIf="item.value.pic != '' ">
-                <img [src]="item.value.pic" alt="project picture">
-            </div>
+  <ng-container *ngFor="let item of experiences | keyvalue: keyPipeSort">
+    <div id="exp-box" class="bounce-on-hov" (click)="openDialog(item)">
+      <div class="title-block" [ngClass]="{ ifNoPic: item.value.pic === '' }">
+        <div class="sub-title-els">
+          {{ item.value.time | datePipe }}
         </div>
-    </ng-container>
+
+        <div class="title-el">
+          {{ item.key }}
+        </div>
+        <div class="sub-title-els">
+          {{ item.value.desc }}
+        </div>
+      </div>
+      <div class="pic" *ngIf="item.value.pic != ''">
+        <img [src]="item.value.pic" alt="project picture" />
+      </div>
+    </div>
+  </ng-container>
 </div>

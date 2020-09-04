@@ -1,79 +1,80 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-#wrapper{
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  & .info-blocks {
+    margin: 5px;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 70%;
-    & .info-blocks{
-        margin: 5px;
-    background-color: black;
-        display: flex;
-        flex-wrap: wrap;
+  }
+  & .card {
+    margin: 1rem;
+    width: 30rem;
+    & img {
+      cursor: pointer;
     }
-    & .card{
-        margin: 1rem;
-        width: 30rem;
-    }
+  }
 }
-.skill{
-    border-left: 1px grey solid;
-    padding-left: 5px; 
-    margin-bottom: 5px;
-    cursor: default;
+.skill {
+  border-left: 1px grey solid;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  cursor: default;
 }
-.dialog-title-block{
-    top: 0;
-    position: sticky;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
-    margin-bottom: 1rem;
-    background-color: $colour;
-    & .dialog-close{
-        color: $colour;
-        @extend .font-links;
-        align-self: flex-end;
-        cursor: pointer;
-        position: absolute;
-        z-index: 9;
-        padding: 20px;
-        background-color: $negative-colour;
-    }
-    & .dialog-title-el{
-        @extend .font-primary;
-        max-width: 60%;
-    }
-    & .dialog-sub-title-els{
-        @extend .font-tertiary;
-        max-width: 60%;
-    }
+.dialog-title-block {
+  top: 0;
+  position: sticky;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  background-color: $colour;
+  & .dialog-close {
+    color: $colour;
+    @extend .font-links;
+    align-self: flex-end;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9;
+    padding: 20px;
+    background-color: $negative-colour;
+  }
+  & .dialog-title-el {
+    @extend .font-primary;
+    max-width: 60%;
+  }
+  & .dialog-sub-title-els {
+    @extend .font-tertiary;
+    max-width: 60%;
+  }
 }
 
-.all-info{
-    display: flex;
-    .paragraphs{
-        width: 70%;
-    }
-    .pics{
-        width: 30%;
-    }
+.all-info {
+  display: flex;
+  .paragraphs {
+    width: 70%;
+  }
+  .pics {
+    width: 30%;
+  }
 }
 @media only screen and (max-width: 1200px) {
-
-    #wrapper{
-        width: 100%;
+  #wrapper {
+    width: 100%;
+  }
+  .all-info {
+    flex-direction: column;
+    .paragraphs {
+      width: 100%;
     }
-    .all-info{
-        flex-direction: column;
-        .paragraphs{
-            width: 100%;
-        }
-        .pics{
-            width: 100%;
-        }
+    .pics {
+      width: 100%;
     }
-
+  }
 }

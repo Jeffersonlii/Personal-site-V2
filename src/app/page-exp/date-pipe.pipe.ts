@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'datePipe'
+  name: 'datePipe',
 })
 export class DatePipePipe implements PipeTransform {
   monthsConv = {
@@ -13,14 +13,22 @@ export class DatePipePipe implements PipeTransform {
     6: 'June',
     7: 'July',
     8: 'August',
-    9: 'September', 
+    9: 'September',
     10: 'October',
     11: 'November',
     12: 'December',
-  }
+  };
 
-  transform(date: string, ...args: unknown[]): unknown {
-    return this.monthsConv[parseInt(date.split('/')[0])] + ' ' +date.split('/')[2];
+  transform(date: string[], ...args: unknown[]): unknown {
+    return date.reduce((acc = '', date) => {
+      return (
+        acc +
+        `${acc === '' ? '' : ' - '}${
+          this.monthsConv[parseInt(date.split('/')[0])] +
+          ' ' +
+          date.split('/')[2]
+        }`
+      );
+    }, undefined);
   }
-
 }
